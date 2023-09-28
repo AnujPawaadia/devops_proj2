@@ -71,5 +71,21 @@ regenerate_button = tk.Button(root, text="Regenerate", command=generate_password
 save_button = tk.Button(root, text="Copy and Save", command=save_password,font=("Arial", 10))
 result_label = tk.Label(root, text="",font=("Arial", 10))
 
+# Arrange widgets using grid layout
+length_label.grid(row=0, column=0,columnspan=2,pady=20,)
+length_entry.grid(row=0, column=2,padx=25)
+uppercase_cb.grid(row=1, column=0,columnspan=3,pady=10)
+lowercase_cb.grid(row=2, column=0,columnspan=3,pady=10)
+digits_cb.grid(row=3, column=0,columnspan=3,pady=10)
+special_cb.grid(row=4, column=0,columnspan=3,pady=10)
+generate_button.grid(row=5, column=0, columnspan=3,pady=10)
+password_entry.grid(row=6, column=0, columnspan=3,pady=10)
+regenerate_button.grid(row=7, column=0,columnspan=2,pady=20)
+save_button.grid(row=7, column=1,columnspan=2,pady=20)
+result_label.grid(row=8, column=0, columnspan=3,pady=30)
+
+root.columnconfigure(0,weight=1)
+root.columnconfigure(1,weight=1)
+
 
 about_window.mainloop()
