@@ -39,6 +39,21 @@ Never worry about weak passwords again!
                        """,font=("Times New Roman", 10))
 about_label.pack()
 
+=======
+#creating new window
+def open_new_window():
+    about_window.destroy()
+    global root
+    
+button = tk.Button(about_window, text="Generate Password", command=open_new_window,font=("Arial", 15))
+button.pack()
+
+# Create the main window
+
+root = tk.Tk()
+root.title("Password Generator")
+root.geometry("400x500+700+300")
+
 # Create widgets
 length_label = tk.Label(root, text="Password Length:",font=("Arial", 15))
 length_entry = tk.Entry(root,width=15)
@@ -55,5 +70,6 @@ password_entry = tk.Entry(root,width=30)
 regenerate_button = tk.Button(root, text="Regenerate", command=generate_password,font=("Arial", 10))
 save_button = tk.Button(root, text="Copy and Save", command=save_password,font=("Arial", 10))
 result_label = tk.Label(root, text="",font=("Arial", 10))
+
 
 about_window.mainloop()
