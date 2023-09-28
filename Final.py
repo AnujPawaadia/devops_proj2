@@ -1,6 +1,8 @@
 import tkinter as tk
 import string
-
+import clipboard
+from tkinter import ttk
+import random
 
     
 about_window = tk.Tk()
@@ -38,6 +40,13 @@ Never worry about weak passwords again!
                        
                        """,font=("Times New Roman", 10))
 about_label.pack()
+
+def open_new_window():
+    about_window.destroy()
+    global root
+    
+button = tk.Button(about_window, text="Generate Password", command=open_new_window,font=("Arial", 15))
+button.pack()
 
 =======
 #creating new window
