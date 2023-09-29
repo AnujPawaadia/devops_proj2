@@ -1,15 +1,15 @@
 # devops_proj2
-SecurePass Generator
+**SecurePass Generator**
 SecurePass Generator is a Python application that helps you create secure and unique passwords for your online accounts. It offers various customization options and features for generating and managing strong passwords.
 
-Features:-
+**Features**:-
 Password Customization: You can customize the generated password by choosing options like uppercase letters, lowercase letters, digits, and special characters.
 
 Clipboard Integration: The generated password is automatically copied to your clipboard for quick and easy pasting into registration forms.
 
 Password Management: SecurePass Generator can save your generated passwords in a "password.txt" file for future reference.
 
-Getting Started
+**Getting Started**
 1.Make sure you have Python installed on your computer.
 
 
@@ -19,7 +19,7 @@ pip install tkinter clipboard
 3.Run the application:
 python password_generator.py
 
-How to Use:-
+**How to Use**:-
 1.Open the application.
 
 2.Select the desired password complexity options by checking the corresponding checkboxes:
@@ -39,7 +39,7 @@ Special Symbols
 
 7.You can regenerate a new password with the same options by clicking the "Regenerate" button.
 
-About
+**About**
 This application was created as a simple tool to help users create strong and secure passwords easily. It provides flexibility in password customization and simplifies the process of managing and saving passwords.
 
 
