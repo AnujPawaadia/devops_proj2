@@ -7,7 +7,7 @@ import random
     
 about_window = tk.Tk()
 about_window.title("About")
-about_window.geometry("700x600")
+about_window.geometry("1100x650")
 about_label = tk.Label(about_window, text=""" 
 
 ------------------------------------------
@@ -71,6 +71,8 @@ button.pack()
 root = tk.Tk()
 root.title("Password Generator")
 root.geometry("400x500+700+300")
+root['background']='#33a1c9'
+
 
 def generate_password():
     length = int(length_entry.get())
@@ -104,6 +106,7 @@ def save_password():
     with open("saved_passwords.txt", "a") as file:
         file.write(password + "\n")
     result_label.config(text="Password saved to 'saved_passwords.txt'.")
+
 
 # Create widgets
 length_label = tk.Label(root, text="Password Length:",font=("Arial", 15))
