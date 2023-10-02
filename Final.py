@@ -25,20 +25,8 @@ Customize your password by selecting options such as uppercase letters, lowercas
 Your generated password is automatically copied to your clipboard for easy and quick pasting into registration forms.
 - Password Management: 
 SecurePass Generator can also save your generated passwords in a password.txt file for future reference.
-
-Usage Instructions:
-1. Select the desired password complexity options.
-2. Click the "Generate Password" button.
-3. Your new password will be displayed on the terminal for easy copying.
-4. The password is also copied to your clipboard automatically.
-5. You can find all your generated passwords in the "password.txt" file.
-
-Keep your online accounts safe and secure with strong, 
-randomly generated passwords created by SecurePass Generator.
-Never worry about weak passwords again!
--------------------------------------------
                        
-                       """,font=("Times New Roman", 10))
+                       """,font=("Times New Roman", 15))
 about_label.pack()
 
 def open_new_window():
