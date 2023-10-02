@@ -44,8 +44,16 @@ about_label.pack()
 def open_new_window():
     about_window.destroy()
     global root
+
+def on_enter(event):
+    button.config(bg="palevioletred", fg="white")
+
+def on_leave(event):
+    button.config(bg="white", fg="black")
     
 button = tk.Button(about_window, text="Generate Password", command=open_new_window,font=("Arial", 15))
+button.bind("<Enter>", on_enter)
+button.bind("<Leave>", on_leave)
 button.pack()
 
 # Create the main window
