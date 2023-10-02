@@ -54,6 +54,7 @@ def on_leave(event):
 button = tk.Button(about_window, text="Generate Password", command=open_new_window,font=("Arial", 15))
 button.bind("<Enter>", on_enter)
 button.bind("<Leave>", on_leave)
+button.pack(pady=20, padx=20)
 button.pack()
 
 # Create the main window
