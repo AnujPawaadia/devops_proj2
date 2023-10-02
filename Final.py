@@ -1,6 +1,8 @@
 import tkinter as tk
 import string
-
+import clipboard
+from tkinter import ttk
+import random
 
     
 about_window = tk.Tk()
@@ -39,6 +41,13 @@ Never worry about weak passwords again!
                        """,font=("Times New Roman", 10))
 about_label.pack()
 
+def open_new_window():
+    about_window.destroy()
+    global root
+    
+button = tk.Button(about_window, text="Generate Password", command=open_new_window,font=("Arial", 15))
+button.pack()
+
 =======
 #creating new window
 def open_new_window():
@@ -62,8 +71,42 @@ button.pack()
 root = tk.Tk()
 root.title("Password Generator")
 root.geometry("400x500+700+300")
-
 root['background']='#33a1c9'
+
+
+def generate_password():
+    length = int(length_entry.get())
+    use_upper = uppercase_var.get()
+    use_lower = lowercase_var.get()
+    use_digits = digits_var.get()
+    use_special = special_var.get()
+
+    characters = ""
+    if use_upper:
+        characters += string.ascii_uppercase
+    if use_lower:
+        characters += string.ascii_lowercase
+    if use_digits:
+        characters += string.digits
+    if use_special:
+        characters += "!@#$%^&*()_+=-[]{}|:;<>,.?/\\"
+
+    if not characters:
+        result_label.config(text="Please select at least one character type.")
+        return
+
+    password = ''.join(random.choice(characters) for _ in range(length))
+    password_entry.delete(0, tk.END)
+    password_entry.insert(0, password)
+    clipboard.copy(password)
+    result_label.config(text="Password copied to clipboard.")
+
+def save_password():
+    password = password_entry.get()
+    with open("saved_passwords.txt", "a") as file:
+        file.write(password + "\n")
+    result_label.config(text="Password saved to 'saved_passwords.txt'.")
+
 
 # Create widgets
 length_label = tk.Label(root, text="Password Length:",font=("Arial", 15))
