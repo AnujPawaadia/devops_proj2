@@ -5,7 +5,7 @@ import string
     
 about_window = tk.Tk()
 about_window.title("About")
-about_window.geometry("700x600")
+about_window.geometry("1100x650")
 about_label = tk.Label(about_window, text=""" 
 
 ------------------------------------------
