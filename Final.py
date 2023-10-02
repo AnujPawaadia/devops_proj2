@@ -63,6 +63,8 @@ root = tk.Tk()
 root.title("Password Generator")
 root.geometry("400x500+700+300")
 
+root['background']='#33a1c9'
+
 # Create widgets
 length_label = tk.Label(root, text="Password Length:",font=("Arial", 15))
 length_entry = tk.Entry(root,width=15)
