@@ -1,5 +1,5 @@
 # devops_proj2
-**SecurePass Generator**
+//SecurePass Generator//
 SecurePass Generator is a Python application that helps you create secure and unique passwords for your online accounts. It offers various customization options and features for generating and managing strong passwords.
 
 **Features**:-
